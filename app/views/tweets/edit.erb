@@ -1,0 +1,9 @@
+<%if Helpers.is_logged_in?(session) %>
+
+<form action="/tweets/<%=@tweet.id%>/edit" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+  <input type="text" name="content" value="<%=@tweet.content%>">
+  <input id="submit" type="submit" name="Edit Tweet">
+</form>
+
+<% end %>
